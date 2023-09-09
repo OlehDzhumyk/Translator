@@ -1,6 +1,5 @@
 package com.oleh;
 
-
 public class Translator {
 
     private enum Case {
@@ -126,8 +125,12 @@ public class Translator {
             if (word.length() > 1) {
                 if (word.charAt(1) < 96) {
                     return Case.CAPS;
-                } else return Case.TITLE_CASE;
-            } else return Case.CAPS;
+                } else {
+                    return Case.TITLE_CASE;
+                }
+            } else {
+                return Case.CAPS;
+            }
         }
 
         return Case.LOWERCASE;
